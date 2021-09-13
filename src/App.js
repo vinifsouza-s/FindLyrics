@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Index from './components/layout/Index';
 import Navbar from "./components/layout/Navbar";
 import { Provider } from './context';
+import './index.css';
 
 function App() {
   return (
