@@ -1,6 +1,13 @@
 .text-center{
-        margin-bottom: 50px;
-        font-family: monospace;
-        padding-left: 47%;
-        font-size: 15px;
+    margin-bottom: 50px;
+    font-family: monospace;
+    padding-left: 45%;
+    font-size: 30px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    justify-content: center;
+    padding-left: 320px;
 }

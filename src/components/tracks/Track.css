@@ -1,6 +1,7 @@
 .track{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
 }
 
 .trackid{
@@ -10,7 +11,6 @@
     font-size: 15px;
     border: 1px solid rgb(73, 72, 72);
 }
-
 
 .trackname{
     padding: 10px;
