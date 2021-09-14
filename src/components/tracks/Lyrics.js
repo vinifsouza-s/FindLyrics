@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Spinner from '../layout/Spinner';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 
 const Lyrics = props => {
     const [track, setTrack] = useState({});
@@ -16,6 +17,7 @@ const Lyrics = props => {
             }&apikey=${process.env.REACT_APP_MM_KEY}`
           )
           .then(res => {
+            console.log(res.data)
             let lyrics = res.data.message.body.lyrics;
             setLyrics({ lyrics });
     
@@ -26,6 +28,7 @@ const Lyrics = props => {
             );
           })
           .then(res => {
+            console.log(res.data)
             let track = res.data.message.body.track;
             setTrack({ track });
           })
@@ -70,7 +73,9 @@ const Lyrics = props => {
                         </li>
                         <li className="list-group-item">
                             <strong>Release Date</strong>:{" "}
-                        
+                            <Moment format="YYYY/MM/DD">
+                                {track.updated_time}
+                            </Moment>    
                         </li>
                      </ul>
                 </>

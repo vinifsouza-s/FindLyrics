@@ -4,13 +4,13 @@ import Index from './components/layout/Index';
 import Navbar from "./components/layout/Navbar";
 import Lyrics from './components/tracks/Lyrics';
 
-import { Provider } from './context';
+import { ContextController } from './context';
 import './index.css';
 
 
 function App() {
   return (
-    <Provider>
+    <ContextController>
         <Router>
           <div className="App">
             <header className="App-header">
@@ -24,7 +24,7 @@ function App() {
             </header>
           </div>
         </Router>
-      </Provider>
+      </ContextController>
   );
 }
 
