@@ -1,0 +1,48 @@
+.track{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.trackid{
+    padding: 20px;
+    margin-bottom: 50px;
+    font-family: monospace;
+    font-size: 15px;
+    border: 1px solid rgb(73, 72, 72);
+}
+
+.trackname{
+    padding: 10px;
+    font-size: 20px;
+    color: blue;
+}
+
+.card-text{
+    padding: 10px;
+    font-size: 15px;
+    color:rgb(70, 3, 3)
+}
+
+.trackbtn{
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 22px;
+    text-decoration: none;
+    margin: 20px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    background-color: #9b59b6;
+    box-shadow: 0px 5px 0px 0px #82409D;
+}
+      
+.trackbtn:active {
+    transform: translate(0px, 5px);
+   -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+}
+
+.trackbtn:hover{
+  background-color: #B573D0; 
+}

@@ -2,16 +2,15 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Spinner from '../layout/Spinner';
 import { Link } from 'react-router-dom';
-import Moment from 'react-moment';
+
 
 const Lyrics = props => {
     const [track, setTrack] = useState({});
     const [lyrics, setLyrics] = useState({});
 
-
+  
     useEffect(() => {
-        axios
-          .get(
+        axios.get(
             `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${
               props.match.params.id
             }&apikey=${process.env.REACT_APP_MM_KEY}`
@@ -70,12 +69,6 @@ const Lyrics = props => {
                         <li className="list-group-item">
                             <strong>Explicit Words</strong>:{" "}
                             {track.track.explicit === 0 ? "No" : "Yes"}
-                        </li>
-                        <li className="list-group-item">
-                            <strong>Release Date</strong>:{" "}
-                            <Moment format="YYYY/MM/DD">
-                                {track.updated_time}
-                            </Moment>    
                         </li>
                      </ul>
                 </>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Track.css';
+import './style/Track.css';
 
 const Track= (props) => {
     const {track} = props;

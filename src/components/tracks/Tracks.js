@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Context } from '../../context';
 import Spinner from '../layout/Spinner';
 import Track from './Track';
-import './Tracks.css';
+import './style/Tracks.css';
 
  const Tracks = () => {
     const [state] = useContext(Context);
