@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Spinner from '../layout/Spinner';
 import { Link } from 'react-router-dom';
+import { API_URL } from '../../services/api';
 
 
 const Lyrics = props => {
@@ -10,36 +11,36 @@ const Lyrics = props => {
 
   
     useEffect(() => {
-        axios.get(
-            `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${
-              props.match.params.id
-            }&apikey=${process.env.REACT_APP_MM_KEY}`
+      axios.get(
+          API_URL + `track.lyrics.get?track_id=${
+            props.match.params.id
+          }&apikey=${process.env.REACT_APP_MM_KEY}`
           )
           .then(res => {
             console.log(res.data)
             let lyrics = res.data.message.body.lyrics;
             setLyrics({ lyrics });
-    
-            return axios.get(
-              `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.get?track_id=${
-                props.match.params.id
-              }&apikey=${process.env.REACT_APP_MM_KEY}`
-            );
-          })
-          .then(res => {
-            console.log(res.data)
-            let track = res.data.message.body.track;
-            setTrack({ track });
-          })
-          .catch(err => console.log(err));
-      }, [props.match.params.id]);
-    
-      if (
-        track === undefined ||
-        lyrics === undefined ||
-        Object.keys(track).length === 0 ||
-        Object.keys(lyrics).length === 0
-      ) {
+  
+          return axios.get(
+          API_URL + `track.get?track_id=${
+              props.match.params.id
+            }&apikey=${process.env.REACT_APP_MM_KEY}`
+          );
+        })
+        .then(res => {
+          console.log(res.data)
+          let track = res.data.message.body.track;
+          setTrack({ track });
+        })
+        .catch(err => console.log(err));
+   }, [props.match.params.id]);
+  
+    if (
+      track === undefined ||
+      lyrics === undefined ||
+      Object.keys(track).length === 0 ||
+      Object.keys(lyrics).length === 0
+    )  {
         return <Spinner />;     
         } else {
             return (
