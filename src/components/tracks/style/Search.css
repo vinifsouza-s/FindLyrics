@@ -1,0 +1,51 @@
+.cardBody{
+    padding-left: 40%;
+    margin-bottom: 50px;
+}
+
+.displayText{
+    padding-left: 2%;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+.leadCenter{
+    font-family: monospace;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.formGroup{
+    padding-left: 6%;
+    margin: 10px;
+}
+
+
+.btnPrimary{
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px 10px 5px 90px;
+    padding: 15px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    background: #272727;
+    background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); 
+
+}
+
+.btnPrimary:active {
+    box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, 
+                        inset rgba(255,255,255,0.03) 0px 20px 0px, 
+                        inset rgba(0,0,0,0.15) 0px -20px 20px, 
+                        inset rgba(255,255,255,0.05) 0px 20px 20px;
+}
+
+.btnPrimary:hover{
+    box-shadow:rgba(0,0,0,0.7) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+
+

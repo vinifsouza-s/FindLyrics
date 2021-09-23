@@ -2,10 +2,10 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Context } from '../../context';
 import { API_URL } from '../../services/api';
-
+import './style/Search.css';
 
 const Search = () => {
-    const [setState] = useContext(Context);
+    const [state, setState] = useContext(Context);
     const [userInput, setUserInput] = useState("");
     const [trackTitle, setTrackTitle] = useState("");
 
@@ -56,11 +56,6 @@ const Search = () => {
           </form>
         </div>
       );
-                
-             
-                
-           
-        
     
 }
 
